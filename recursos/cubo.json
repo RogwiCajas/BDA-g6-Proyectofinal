@@ -1,0 +1,605 @@
+{
+  "uuid": "ff1aac68-edfc-c26f-dcdb-c23e45f16e47",
+  "last_modified": 1643593384431,
+  "version": "3.0.0.20500",
+  "name": "adventureworkscube",
+  "is_draft": false,
+  "model_name": "adventureworksmodel",
+  "description": "",
+  "null_string": null,
+  "dimensions": [
+    {
+      "name": "PRODUCTKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "PRODUCTKEY",
+      "derived": null
+    },
+    {
+      "name": "ORDERDATEKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "ORDERDATEKEY",
+      "derived": null
+    },
+    {
+      "name": "CUSTOMERKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "CUSTOMERKEY",
+      "derived": null
+    },
+    {
+      "name": "PROMOTIONKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "PROMOTIONKEY",
+      "derived": null
+    },
+    {
+      "name": "CURRENCYKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "CURRENCYKEY",
+      "derived": null
+    },
+    {
+      "name": "SALESTERRITORYKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "SALESTERRITORYKEY",
+      "derived": null
+    },
+    {
+      "name": "CUSTOMERKEY",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "CUSTOMERKEY"
+      ]
+    },
+    {
+      "name": "GENDER",
+      "table": "DIMCUSTOMER",
+      "column": "GENDER",
+      "derived": null
+    },
+    {
+      "name": "PRODUCTKEY",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "PRODUCTKEY"
+      ]
+    },
+    {
+      "name": "PRODUCTCATEGORYKEY",
+      "table": "DIMPRODUCT",
+      "column": "PRODUCTCATEGORYKEY",
+      "derived": null
+    },
+    {
+      "name": "PRODUCTSUBCATEGORYKEY",
+      "table": "DIMPRODUCT",
+      "column": "PRODUCTSUBCATEGORYKEY",
+      "derived": null
+    },
+    {
+      "name": "STANDARDCOST",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STANDARDCOST"
+      ]
+    },
+    {
+      "name": "COLOR",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "COLOR"
+      ]
+    },
+    {
+      "name": "SIZE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "SIZE"
+      ]
+    },
+    {
+      "name": "STYLE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STYLE"
+      ]
+    },
+    {
+      "name": "ENGLISHDESCRIPTION",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "ENGLISHDESCRIPTION"
+      ]
+    },
+    {
+      "name": "STATUS",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STATUS"
+      ]
+    },
+    {
+      "name": "CURRENCYKEY",
+      "table": "DIMCURRENCY",
+      "column": null,
+      "derived": [
+        "CURRENCYKEY"
+      ]
+    },
+    {
+      "name": "CURRENCYNAME",
+      "table": "DIMCURRENCY",
+      "column": "CURRENCYNAME",
+      "derived": null
+    },
+    {
+      "name": "PROMOTIONKEY",
+      "table": "DIMPROMOTION",
+      "column": null,
+      "derived": [
+        "PROMOTIONKEY"
+      ]
+    },
+    {
+      "name": "DISCOUNTPCT",
+      "table": "DIMPROMOTION",
+      "column": "DISCOUNTPCT",
+      "derived": null
+    },
+    {
+      "name": "MINQTY",
+      "table": "DIMPROMOTION",
+      "column": "MINQTY",
+      "derived": null
+    },
+    {
+      "name": "MAXQTY",
+      "table": "DIMPROMOTION",
+      "column": "MAXQTY",
+      "derived": null
+    },
+    {
+      "name": "SALESTERRITORYKEY",
+      "table": "DIMSALESTERRITORY",
+      "column": null,
+      "derived": [
+        "SALESTERRITORYKEY"
+      ]
+    },
+    {
+      "name": "SALESTERRITORYREGION",
+      "table": "DIMSALESTERRITORY",
+      "column": "SALESTERRITORYREGION",
+      "derived": null
+    },
+    {
+      "name": "SALESTERRITORYCOUNTRY",
+      "table": "DIMSALESTERRITORY",
+      "column": "SALESTERRITORYCOUNTRY",
+      "derived": null
+    },
+    {
+      "name": "SALESTERRITORYGROUP",
+      "table": "DIMSALESTERRITORY",
+      "column": "SALESTERRITORYGROUP",
+      "derived": null
+    },
+    {
+      "name": "DATEKEY",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "DATEKEY"
+      ]
+    },
+    {
+      "name": "DAYNUMBEROFWEEK",
+      "table": "DIMDATE",
+      "column": "DAYNUMBEROFWEEK",
+      "derived": null
+    },
+    {
+      "name": "ENGLISHDAYNAMEOFWEEK",
+      "table": "DIMDATE",
+      "column": "ENGLISHDAYNAMEOFWEEK",
+      "derived": null
+    },
+    {
+      "name": "DAYNUMBEROFMONTH",
+      "table": "DIMDATE",
+      "column": "DAYNUMBEROFMONTH",
+      "derived": null
+    },
+    {
+      "name": "DAYNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": "DAYNUMBEROFYEAR",
+      "derived": null
+    },
+    {
+      "name": "WEEKNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": "WEEKNUMBEROFYEAR",
+      "derived": null
+    },
+    {
+      "name": "ENGLISHMONTHNAME",
+      "table": "DIMDATE",
+      "column": "ENGLISHMONTHNAME",
+      "derived": null
+    },
+    {
+      "name": "MONTHNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": "MONTHNUMBEROFYEAR",
+      "derived": null
+    },
+    {
+      "name": "CALENDARQUARTER",
+      "table": "DIMDATE",
+      "column": "CALENDARQUARTER",
+      "derived": null
+    },
+    {
+      "name": "CALENDARYEAR",
+      "table": "DIMDATE",
+      "column": "CALENDARYEAR",
+      "derived": null
+    },
+    {
+      "name": "CALENDARSEMESTER",
+      "table": "DIMDATE",
+      "column": "CALENDARSEMESTER",
+      "derived": null
+    },
+    {
+      "name": "PRODUCTSUBCATEGORYKEY",
+      "table": "DIMPRODUCTSUBCATEGORY",
+      "column": null,
+      "derived": [
+        "PRODUCTSUBCATEGORYKEY"
+      ]
+    },
+    {
+      "name": "ENGLISHPRODUCTSUBCATEGORYNAME",
+      "table": "DIMPRODUCTSUBCATEGORY",
+      "column": null,
+      "derived": [
+        "ENGLISHPRODUCTSUBCATEGORYNAME"
+      ]
+    },
+    {
+      "name": "PRODUCTCATEGORYKEY",
+      "table": "DIMPRODUCTCATEGORY",
+      "column": null,
+      "derived": [
+        "PRODUCTCATEGORYKEY"
+      ]
+    },
+    {
+      "name": "ENGLISHPRODUCTCATEGORYNAME",
+      "table": "DIMPRODUCTCATEGORY",
+      "column": null,
+      "derived": [
+        "ENGLISHPRODUCTCATEGORYNAME"
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "name": "_COUNT_",
+      "function": {
+        "expression": "COUNT",
+        "parameter": {
+          "type": "constant",
+          "value": "1"
+        },
+        "returntype": "bigint"
+      }
+    },
+    {
+      "name": "TOTAL_VENTAS",
+      "function": {
+        "expression": "SUM",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.SALESAMOUNT"
+        },
+        "returntype": "decimal(19,4)"
+      }
+    },
+    {
+      "name": "DISCOUNTAMOUNT",
+      "function": {
+        "expression": "SUM",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.DISCOUNTAMOUNT"
+        },
+        "returntype": "double"
+      }
+    },
+    {
+      "name": "TAXAM",
+      "function": {
+        "expression": "SUM",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.TAXAMT"
+        },
+        "returntype": "decimal(19,4)"
+      }
+    },
+    {
+      "name": "TOTALORDER",
+      "function": {
+        "expression": "SUM",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.ORDERQUANTITY"
+        },
+        "returntype": "bigint"
+      }
+    }
+  ],
+  "dictionaries": [],
+  "rowkey": {
+    "rowkey_columns": [
+      {
+        "column": "FACTINTERNETSALES.PRODUCTKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.ORDERDATEKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.CUSTOMERKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.PROMOTIONKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.CURRENCYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.SALESTERRITORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMCUSTOMER.GENDER",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPRODUCT.PRODUCTCATEGORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMCURRENCY.CURRENCYNAME",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPROMOTION.DISCOUNTPCT",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPROMOTION.MINQTY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPROMOTION.MAXQTY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYREGION",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYGROUP",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFWEEK",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.ENGLISHDAYNAMEOFWEEK",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFMONTH",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFYEAR",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.WEEKNUMBEROFYEAR",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.ENGLISHMONTHNAME",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.MONTHNUMBEROFYEAR",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.CALENDARQUARTER",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.CALENDARYEAR",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.CALENDARSEMESTER",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      }
+    ]
+  },
+  "hbase_mapping": {
+    "column_family": [
+      {
+        "name": "F1",
+        "columns": [
+          {
+            "qualifier": "M",
+            "measure_refs": [
+              "_COUNT_",
+              "TOTAL_VENTAS",
+              "DISCOUNTAMOUNT",
+              "TAXAM",
+              "TOTALORDER"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "aggregation_groups": [
+    {
+      "includes": [
+        "FACTINTERNETSALES.PRODUCTKEY",
+        "FACTINTERNETSALES.ORDERDATEKEY",
+        "FACTINTERNETSALES.CUSTOMERKEY",
+        "FACTINTERNETSALES.PROMOTIONKEY",
+        "FACTINTERNETSALES.CURRENCYKEY",
+        "FACTINTERNETSALES.SALESTERRITORYKEY",
+        "DIMPRODUCT.PRODUCTCATEGORYKEY",
+        "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
+        "DIMCURRENCY.CURRENCYNAME",
+        "DIMPROMOTION.DISCOUNTPCT",
+        "DIMSALESTERRITORY.SALESTERRITORYREGION",
+        "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+        "DIMSALESTERRITORY.SALESTERRITORYGROUP",
+        "DIMDATE.DAYNUMBEROFWEEK",
+        "DIMDATE.ENGLISHDAYNAMEOFWEEK",
+        "DIMDATE.DAYNUMBEROFMONTH",
+        "DIMDATE.ENGLISHMONTHNAME",
+        "DIMDATE.CALENDARQUARTER",
+        "DIMDATE.CALENDARYEAR"
+      ],
+      "select_rule": {
+        "hierarchy_dims": [
+          [
+            "FACTINTERNETSALES.PRODUCTKEY",
+            "DIMPRODUCT.PRODUCTCATEGORYKEY",
+            "DIMPRODUCT.PRODUCTSUBCATEGORYKEY"
+          ],
+          [
+            "DIMDATE.CALENDARQUARTER",
+            "DIMDATE.ENGLISHMONTHNAME"
+          ]
+        ],
+        "mandatory_dims": [],
+        "joint_dims": [
+          [
+            "DIMSALESTERRITORY.SALESTERRITORYREGION",
+            "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+            "DIMSALESTERRITORY.SALESTERRITORYGROUP"
+          ],
+          [
+            "DIMDATE.DAYNUMBEROFWEEK",
+            "DIMDATE.ENGLISHDAYNAMEOFWEEK"
+          ]
+        ]
+      }
+    }
+  ],
+  "signature": "OoRYn6ycmmKxjC6ZF8wJqw==",
+  "notify_list": [],
+  "status_need_notify": [
+    "ERROR",
+    "DISCARDED",
+    "SUCCEED"
+  ],
+  "partition_date_start": 0,
+  "partition_date_end": 3153600000000,
+  "auto_merge_time_ranges": [
+    604800000,
+    2419200000
+  ],
+  "volatile_range": 0,
+  "retention_range": 0,
+  "engine_type": 4,
+  "storage_type": 2,
+  "override_kylin_properties": {},
+  "cuboid_black_list": [],
+  "parent_forward": 3,
+  "mandatory_dimension_set_list": [],
+  "snapshot_table_desc_list": []
+}
