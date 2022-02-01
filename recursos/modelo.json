@@ -1,6 +1,6 @@
 {
-  "uuid": "eacf0cc4-7805-c96c-d5e8-f416d5158095",
-  "last_modified": 1643593025150,
+  "uuid": "bdfa1deb-44b3-a033-ccae-c56b2779a01b",
+  "last_modified": 1643706885550,
   "version": "3.0.0.20500",
   "name": "adventureworksmodel",
   "owner": "ADMIN",
@@ -10,30 +10,16 @@
   "fact_table_alias": "FACTINTERNETSALES",
   "lookups": [
     {
-      "table": "ADVENTUREWORKSDW.DIMCUSTOMER",
+      "table": "ADVENTUREWORKSDW.DIMDATE",
       "kind": "LOOKUP",
-      "alias": "DIMCUSTOMER",
+      "alias": "DIMDATE",
       "join": {
         "type": "inner",
         "primary_key": [
-          "DIMCUSTOMER.CUSTOMERKEY"
+          "DIMDATE.DATEKEY"
         ],
         "foreign_key": [
-          "FACTINTERNETSALES.CUSTOMERKEY"
-        ]
-      }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCT",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCT",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCT.PRODUCTKEY"
-        ],
-        "foreign_key": [
-          "FACTINTERNETSALES.PRODUCTKEY"
+          "FACTINTERNETSALES.ORDERDATEKEY"
         ]
       }
     },
@@ -52,20 +38,6 @@
       }
     },
     {
-      "table": "ADVENTUREWORKSDW.DIMPROMOTION",
-      "kind": "LOOKUP",
-      "alias": "DIMPROMOTION",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPROMOTION.PROMOTIONKEY"
-        ],
-        "foreign_key": [
-          "FACTINTERNETSALES.PROMOTIONKEY"
-        ]
-      }
-    },
-    {
       "table": "ADVENTUREWORKSDW.DIMSALESTERRITORY",
       "kind": "LOOKUP",
       "alias": "DIMSALESTERRITORY",
@@ -78,85 +50,31 @@
           "FACTINTERNETSALES.SALESTERRITORYKEY"
         ]
       }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMDATE",
-      "kind": "LOOKUP",
-      "alias": "DIMDATE",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMDATE.DATEKEY"
-        ],
-        "foreign_key": [
-          "FACTINTERNETSALES.ORDERDATEKEY"
-        ]
-      }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCTSUBCATEGORY",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCTSUBCATEGORY",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCTSUBCATEGORY.PRODUCTSUBCATEGORYKEY"
-        ],
-        "foreign_key": [
-          "DIMPRODUCT.PRODUCTSUBCATEGORYKEY"
-        ]
-      }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCTCATEGORY",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCTCATEGORY",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCTCATEGORY.PRODUCTCATEGORYKEY"
-        ],
-        "foreign_key": [
-          "DIMPRODUCT.PRODUCTCATEGORYKEY"
-        ]
-      }
     }
   ],
   "dimensions": [
     {
       "table": "FACTINTERNETSALES",
       "columns": [
-        "PRODUCTKEY",
-        "CUSTOMERKEY",
-        "PROMOTIONKEY",
         "ORDERDATEKEY",
-        "SALESTERRITORYKEY",
-        "CURRENCYKEY"
+        "CURRENCYKEY",
+        "SALESTERRITORYKEY"
       ]
     },
     {
-      "table": "DIMCUSTOMER",
+      "table": "DIMDATE",
       "columns": [
-        "CUSTOMERKEY",
-        "GENDER",
-        "YEARLYINCOME",
-        "BIRTHDATE"
-      ]
-    },
-    {
-      "table": "DIMPRODUCT",
-      "columns": [
-        "PRODUCTKEY",
-        "STANDARDCOST",
-        "COLOR",
-        "STYLE",
-        "SIZE",
-        "ENGLISHDESCRIPTION",
-        "STARTDATE",
-        "ENDDATE",
-        "STATUS",
-        "PRODUCTSUBCATEGORYKEY",
-        "PRODUCTCATEGORYKEY"
+        "DAYNUMBEROFWEEK",
+        "ENGLISHDAYNAMEOFWEEK",
+        "DAYNUMBEROFMONTH",
+        "DAYNUMBEROFYEAR",
+        "WEEKNUMBEROFYEAR",
+        "ENGLISHMONTHNAME",
+        "MONTHNUMBEROFYEAR",
+        "CALENDARQUARTER",
+        "CALENDARYEAR",
+        "CALENDARSEMESTER",
+        "DATEKEY"
       ]
     },
     {
@@ -167,17 +85,6 @@
       ]
     },
     {
-      "table": "DIMPROMOTION",
-      "columns": [
-        "PROMOTIONKEY",
-        "DISCOUNTPCT",
-        "STARTDATE",
-        "ENDDATE",
-        "MINQTY",
-        "MAXQTY"
-      ]
-    },
-    {
       "table": "DIMSALESTERRITORY",
       "columns": [
         "SALESTERRITORYKEY",
@@ -185,44 +92,12 @@
         "SALESTERRITORYCOUNTRY",
         "SALESTERRITORYGROUP"
       ]
-    },
-    {
-      "table": "DIMPRODUCTSUBCATEGORY",
-      "columns": [
-        "PRODUCTSUBCATEGORYKEY",
-        "ENGLISHPRODUCTSUBCATEGORYNAME"
-      ]
-    },
-    {
-      "table": "DIMPRODUCTCATEGORY",
-      "columns": [
-        "PRODUCTCATEGORYKEY",
-        "ENGLISHPRODUCTCATEGORYNAME"
-      ]
-    },
-    {
-      "table": "DIMDATE",
-      "columns": [
-        "DATEKEY",
-        "DAYNUMBEROFWEEK",
-        "ENGLISHDAYNAMEOFWEEK",
-        "DAYNUMBEROFMONTH",
-        "DAYNUMBEROFYEAR",
-        "WEEKNUMBEROFYEAR",
-        "ENGLISHMONTHNAME",
-        "MONTHNUMBEROFYEAR",
-        "CALENDARQUARTER",
-        "CALENDARYEAR",
-        "CALENDARSEMESTER"
-      ]
     }
   ],
   "metrics": [
+    "FACTINTERNETSALES.DISCOUNTAMOUNT",
     "FACTINTERNETSALES.SALESAMOUNT",
-    "FACTINTERNETSALES.TAXAMT",
-    "FACTINTERNETSALES.ORDERQUANTITY",
-    "FACTINTERNETSALES.TOTALPRODUCTCOST",
-    "FACTINTERNETSALES.DISCOUNTAMOUNT"
+    "FACTINTERNETSALES.TAXAMT"
   ],
   "filter_condition": "",
   "partition_desc": {
@@ -235,5 +110,5 @@
     "partition_condition_builder": "org.apache.kylin.metadata.model.PartitionDesc$DefaultPartitionConditionBuilder"
   },
   "capacity": "MEDIUM",
-  "projectName": "adventureworks"
+  "projectName": "adventureworksdw"
 }
